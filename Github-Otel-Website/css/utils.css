@@ -1,0 +1,203 @@
+/* 
+    Altın Sarısı: #FFD700
+    Bronz: #CD7F32
+    Turuncu: #FFA500
+    Kumlu Bej: #F5DEB3
+    Kahverengi: #8B4513
+
+*/
+/* Renklerimizi Tanımlıyoruz ve Adlandırıyoruz */
+:root{
+    --white:#fff;
+    --arkaplan:#EDF2F4;
+    --baslik:#2B2D42;
+    --vurgu1:#EF233C;
+    --vurgu2:#FFC300;
+    --vurgu3:#D90429;
+
+    --ayrinti:#A8DADC;
+
+    --yazi-1:#1D3557;
+    --yazi-2:#000000;
+
+    --buton1:#FF9F1C;
+    --buton2:#06D6A0;
+
+    --danger:#dc3545;
+    --success:#28a745;
+    --warning:#ffc107;
+    --info:#17a2b8;
+    --dark:#343a40;
+    --light:#f8f9fa;
+
+}
+/* Yazı renklerinin tanımlıyoruz */
+.text-success{color:var(--success);}
+.text-danger{color:var(--danger);}
+.text-warning{color:var(--warning);}
+.text-info{color:var(--info);}
+.text-dark{color:var(--dark);}
+.text-light{color:var(--light);}
+.text-ayrinti{color: var(--ayrinti);}
+
+/* Arka plan renklerini tanımlıyoruz */
+.bgcolor-success{background-color:var(--success)}
+.bgcolor-danger{background-color:var(--danger);}
+.bgcolor-warning{background-color:var(--warning);}
+.bgcolor-info{background-color:var(--info);}
+.bgcolor-dark{background-color:var(--dark);}
+.bgcolor-light{background-color:var(--light);}
+.bgcolor-vurgu2{background-color:var(--vurgu2)}
+.bgcolor-ayrinti{background-color: var(--ayrinti);}
+.bgcolor-baslik{background-color: var(--baslik);}
+.bgcolor-arkaplan{background-color: var(--arkaplan);}
+.bgcolor-buton1{background-color: var(--buton1);}
+.bgcolor-buton2{background-color: var(--buton2);}
+
+/* Buttonlar için bir tema ayarlıyoruz */
+.btn{
+    cursor:pointer;
+    display: inline-block;
+    padding: 10px 30px;
+    border:none;
+    border-radius: 5px;
+}
+.btn:hover{
+    box-shadow: 0px 0px 58px -9px rgb(90, 69, 69);
+}
+
+
+.btn-ikinci{
+    background-color:var(--buton2);
+    color:var(--white);
+}
+.btn-ucuncu{
+    background-color: var(--success);
+    color:var(--arkaplan)
+}
+
+
+
+.flex-items{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+.flex-items >div{
+    padding: 20px;
+    flex-basis: 100%;
+}
+
+.flex-columns .row{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.flex-columns .row .column{
+    width: 50%;
+}
+.flex-columns img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.flex-columns.article .column:nth-child(odd){
+    flex: 3;
+}
+.flex-columns.article .column:nth-child(even){
+    flex:7;
+}
+
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2{
+    height: 100%;
+}
+.column .column-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.flex-columns h2{
+    font-size: 4rem;
+    font-weight: 400;
+}
+.flex-columns p{
+    margin: 2rem 0;
+}
+.section-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+}
+.section-header h2{
+    font-size: 4rem;
+    margin: 2rem 0;
+}
+.flex-grid .photos{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 .4rem;
+}
+.flex-grid .photos .row{
+    width: 25%;
+    padding: 0 .4rem;
+}
+.section-padding{
+    padding: 2rem 2rem 4rem;
+}
+.flex-items img{
+    z-index: -1;
+}
+.form-control .submit{
+    
+    margin-top: 2rem;
+}
+
+
+/* Mobile Design */
+@media(max-width:768px){
+    .flex-items{
+        flex-direction: column;
+    }
+    .flex-items img{
+        width: 50%;
+    }
+    .card-body{
+        width: 75%;
+        text-align: center;
+    }
+    .footer{
+        height: 100px;
+    }
+    .flex-columns .row .column{
+        flex: 100%!important;
+    }
+    .column .column-2{
+        padding: 45px;
+    }
+    .column-1{
+        height: 300px!important;
+        overflow: hidden;
+    }
+    .column-1 img{
+        height: 100%;
+        object-fit: cover;
+    }
+    .flex-grid .photos .row{
+        width: 50%;
+    }
+    .photos{
+        margin: 25px;
+    }
+}
+
+

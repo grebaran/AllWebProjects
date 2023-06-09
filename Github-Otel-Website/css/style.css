@@ -1,0 +1,266 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;800;900&display=swap');
+:root{
+    --white:#fff;
+
+    --baslik:#2B2D42;
+    --vurgu1:#EF233C;
+    --vurgu2:#FFC300;
+    --vurgu3:#D90429;
+
+    --ayrinti:#A8DADC;
+
+    --yazi-1:#1D3557;
+    --yazi-2:#000000;
+
+    --buton1:#FF9F1C;
+    --buton2:#06D6A0;
+
+    --danger:#dc3545;
+    --success:#28a745;
+    --warning:#ffc107;
+    --info:#17a2b8;
+    --dark:#343a40;
+    --light:#f8f9fa;
+
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* html etiketine font-size vermemizin sebebi biz rem gibi ölçütler kullandığımız zaman kullandığımız
+etiketin üstündeki temel oran baz alınır ve html etiketi body etiketinin üst etiketi olduğundan dolayı 1.rem*10 dan body
+etiketinin alacağı değer 16 px olacaktır ve bu tarayıcıya özel büyüyüp küçülecektir.*/
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    background: #EDF2F4;
+    color:#1D3557;
+    line-height: 1.6;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    color:var(--yazi-1);
+    text-decoration: none;
+}
+
+h1,h2{
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+p{
+    margin: 1rem 0;
+}
+
+img{
+    width: 100%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* navbar */
+.navbar{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--ayrinti);
+    opacity: 0.8;
+    color: var(--baslik);
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top:0;
+    padding: 0 3rem;
+}
+.navbar nav ul li a{
+    padding: 1rem 2rem;
+    margin: 0 0.5rem;
+}
+.navbar a:hover{
+    border-bottom: 2px solid var(--buton2);
+}
+.navbar .logo{
+    font-weight: 400;
+}
+
+.navbar h1{
+    font-size:3rem;
+}
+.navbar span{
+    color:var(--white);
+
+
+}
+
+.navbar ul{
+    display: flex;
+}
+
+/* Header */
+.main-header{
+    background-image: url("../images/bg-1.jpeg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.main-header.blogs{
+    background-image: url("../images/bg-2.jpeg");
+    height: 70vh;
+}
+
+.navbar{
+    z-index: 5;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.content-background{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+.content h1{
+    font-size: 4.5rem;
+}
+.main-header .content p{
+    font-size: 2.3rem;
+}
+/* articles */
+.articles{
+    padding: 30px 5rem;
+}
+.article h2{
+    font-size: 2.5rem!important;
+}
+.article{
+    margin-top: 1.7rem;
+    color: var(--bej);
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    background-color: var(--ayrinti)!important;
+    color:var(--baslik);
+}
+
+.footer .social a{
+    padding: 15px;
+}
+.social i{
+    font-size: 25px;
+}
+
+/* icons */
+.icons{
+    padding: 30px;
+
+}
+.icons h3{
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.icons i{
+    background-color: var(--ayrinti);
+    color:var(--vurgu1);
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+#about h2{
+    font-size: 4rem;
+    font-weight: 400;
+}
+#about p{
+    margin: 2rem 0;
+}
+
+/* Gallery */
+.gallery img:hover{
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5), 0 0 20px 20px rgba(255, 255, 255, 0.5), 0 0 30px 30px rgba(255, 255, 255, 0.5), 0 0 40px 40px rgba(255, 255, 255, 0.5), 0 0 50px 50px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+/* Cards */
+.card{
+    color:var(--bej);
+    font-weight: 500;
+}
+.card-body{
+    padding: 2rem;
+    margin: -7px auto;
+}
+
+/* Contact */
+.contact-form{
+    width: 100%;
+    padding: 2rem 0;
+
+}
+.contact-form label{
+    display: flex;
+    margin-bottom: 0.5rem;
+    margin-right: 10px;
+    width: 20%;
+    
+}
+
+.contact-form .form-control{
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: left;
+    margin: 1rem 1rem;
+}
+.contact-form input{
+    width: 80%;
+    padding: 1rem;
+    height: 40px;
+    border-radius: 1px solid #f5f5f5;
+}
+
+
+/* Mobile Design */
+@media(max-width:768px) {
+    html {
+        font-size: 8px;
+    }
+    .navbar{
+        flex-direction: column;
+        height: 120px;
+        padding: 20px;
+    }
+}
